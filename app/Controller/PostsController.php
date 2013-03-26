@@ -5,22 +5,22 @@
 		
 		/*
 		 * The single instruction in the action uses set() to pass data from the 
-		 * controller to the view (which we’ll create next). The line sets the view 
-		 * variable called ‘posts’ equal to the return value of the find('all') method
-		 * of the Post model. Our Post model(Database Table) is automatically available at $this->Post 
-		 * because we’ve followed Cake’s naming conventions.
+		 * controller to the view. The line sets the view variable called ‘posts’ 
+		 * equal to the return value of the find('all') method
+		 * of the Post model. Our Post model(Database Table) is automatically 
+		 * available at $this->Post because we’ve followed Cake’s naming conventions.
 		 */
 		public function index(){
 			$this->set('posts',$this->Post->find('all'));
 		}
 		
-    /**
-     * The $id param is passed to this action through the arguments specified in the URL.
-     * The id variable for the $this->Post instance (object) is set to the current id
-     * passed by the URL thus setting the $this->Post object.
-     * The read() method returns one row and the set() method stores it in 
-     * the $post variable which is used in the view file.
-     */
+	    /**
+	     * The $id param is passed to this action through the arguments specified in the URL.
+	     * The id variable for the $this->Post instance (object) is set to the current id
+	     * passed by the URL thus setting the $this->Post object.
+	     * The read() method returns one row and the set() method stores it in 
+	     * the $post variable which is used in the view file.
+	     */
 		public function view($id = NULL){			
 			$this->Post->id = $id;										
 			$this->set('post',$this->Post->read()); 

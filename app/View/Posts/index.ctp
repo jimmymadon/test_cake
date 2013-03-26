@@ -6,6 +6,8 @@
 		<th>Id</th>
 		<th>Title</th>
 		<th>Created</th>
+		<th>Edit</th>
+		<th>Delete</th>
 	</tr>
 	
 	<!-- Here is where we loop through our $posts 
@@ -20,8 +22,7 @@
 			 * For URL = www.example.com/controller/action/param1/param2
 			 * 
 			 * param1,param2,etc are parameters of the action() method defined in
-			 * the controller and will be passed to the method when the URL is
-			 * requested.
+			 * the controller and will be passed to the method when the URL is requested.
 			 */
 			echo $this->Html->link($post['Post']['title'],
 			array('controller' => 'posts','action'=>'view',$post['Post']['id'])); ?>
