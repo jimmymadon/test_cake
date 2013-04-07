@@ -1,6 +1,6 @@
 <!-- File: /app/View/Posts/index.ctp -->
 <h1>Blog posts</h1>
-<?php echo $this->Html->link('Add Post',array('controller'=>'posts','action'=>'add')); ?>
+<?php echo $this->Html->link('Add Post', array('controller'=>'posts','action'=>'add')); ?>
 <table>
 	<tr>
 		<th>Id</th>
@@ -24,8 +24,7 @@
 			 * param1,param2,etc are parameters of the action() method defined in
 			 * the controller and will be passed to the method when the URL is requested.
 			 */
-			echo $this->Html->link($post['Post']['title'],
-			array('controller' => 'posts','action'=>'view',$post['Post']['id'])); ?>
+			echo $this->Html->link($post['Post']['title'], array('controller' => 'posts','action'=>'view',$post['Post']['id'])); ?>
 		</td>
 		<td>
         <?php echo $post['Post']['created']; ?>
