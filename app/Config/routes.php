@@ -28,7 +28,7 @@
  */
 	// Router::connect('/', array('controller' => 'pages', 'action' => 'display', 'home'));
 // The above line is modified to the one below to connect the home page to the Posts/index file
-	Router::connect('/', array('controller' => 'posts', 'action' => 'index', 'home'));
+	Router::connect('/', array('controller' => 'posts', 'action' => 'index'));
 
 /**
  * ...and connect the rest of 'Pages' controller's urls.

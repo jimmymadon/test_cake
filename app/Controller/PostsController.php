@@ -28,6 +28,7 @@
 		
 		public function add(){
 			if($this->request->is('POST')) {                 // used instead of $this->data
+				$this->request->data['Post']['user_id'] = $this->Auth->user('id'); // 
 				if($this->Post->save($this->request->data)){   // used instead of $this->data
 					$this->Session->setFlash('Your post has been saved.');			
 					$this->redirect(array('action'=>'index'));
