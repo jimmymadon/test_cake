@@ -45,4 +45,14 @@ class AppController extends Controller {
 	public function beforeFilter() {
 		$this->Auth->allow('index', 'view'); // The listing of all model entries and the viewing of each individual one is allowed by default.
 	}
+
+	public function isAuthorized($user) {
+		// Admin can access every action
+		if (isset($user['role']) && $user['role'] === 'admin') {
+			return true;
+		}
+
+		// Default deny
+		return false;
+	}
 }

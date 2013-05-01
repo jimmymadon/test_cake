@@ -12,4 +12,10 @@
         'rule'=>'notEmpty'
 			)
 		);
+
+    public $belongsTo = array('User');
+
+    public function isOwnedBy($post, $user) {
+      return $this->field('id', array('id' => $post, 'user_id' => $user)) === $post;
+    }
   }
