@@ -9,6 +9,6 @@ echo $this->Form->input('title');
 <input name="data[Post][title]" id="PostTitle" /> -->
 
 <?php 
-echo $this->Form->input('body',array('rows'=>'3'));
+echo $this->Form->input('body', array('rows'=>'3'));
 echo $this->Form->end('Save Post');
 ?>
